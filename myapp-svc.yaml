@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2026-10-13T23:58:39Z"
+  labels:
+    app: myapp
+  name: myapp
+  namespace: devops-bootcamp
+  resourceVersion: "61365954"
+  uid: acb3df14-db99-4aab-b708-4c3c3f254ba6
+spec:
+  clusterIP: 10.102.131.2
+  clusterIPs:
+  - 10.102.131.2
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 8081
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: myapp
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,6 @@
+releases:
+  - name: myapp
+    namespace: devops-bootcamp
+    chart: charts/myapp
+    values: 
+    - values/myapp-values.yaml

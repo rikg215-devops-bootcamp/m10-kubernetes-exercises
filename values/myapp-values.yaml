@@ -1,0 +1,15 @@
+appName: myapp
+appNamespace: devops-bootcamp
+replicaCount: 2
+registrySecret: docker-auth
+imageName: rik215/bootcamp-test:my-app-1
+appPort: 8080
+svcPort: 8081
+svcType: ClusterIP
+appHost: my-java-app.com
+configData:
+  DB_NAME: test_db
+  DB_SERVER: mysql-primary
+  DB_USER: testuser
+secretData:
+  DB_PWD: testuser1234!
